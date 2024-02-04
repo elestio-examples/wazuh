@@ -3,7 +3,7 @@ version: "3.7"
 
 services:
   wazuh.manager:
-    image: wazuh/wazuh-manager:4.9.0
+    image: wazuh/wazuh-manager:${SOFTWARE_VERSION_TAG}
     hostname: wazuh.manager
     restart: always
     ulimits:
@@ -45,7 +45,7 @@ services:
       - /root/.acme.sh/vm.elestio.app/vm.elestio.app.key:/etc/ssl/filebeat.key
 
   wazuh.indexer:
-    image: wazuh/wazuh-indexer:4.9.0
+    image: wazuh/wazuh-indexer:${SOFTWARE_VERSION_TAG}
     hostname: wazuh.indexer
     restart: always
     ports:
@@ -71,7 +71,7 @@ services:
       - ./config/wazuh_indexer/internal_users.yml:/usr/share/wazuh-indexer/opensearch-security/internal_users.yml
 
   wazuh.dashboard:
-    image: wazuh/wazuh-dashboard:4.9.0
+    image: wazuh/wazuh-dashboard:${SOFTWARE_VERSION_TAG}
     hostname: wazuh.dashboard
     restart: always
     ports:
