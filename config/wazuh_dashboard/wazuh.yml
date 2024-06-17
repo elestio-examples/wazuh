@@ -4,4 +4,6 @@ hosts:
       port: 55000
       username: admin
       password: "ADMIN_PASSWORD"
-      run_as: true
+      run_as: false
+
+enrollment.dns: "IP"

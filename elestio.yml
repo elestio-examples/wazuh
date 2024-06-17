@@ -14,6 +14,8 @@ environments:
     value: "[EMAIL]"
   - key: "ADMIN_PASSWORD"
     value: "@random_password"
+  - key: "IP"
+    value: "[IP]"
 
 config:
   runTime: "dockerCompose"

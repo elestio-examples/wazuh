@@ -10,4 +10,4 @@ sed -i "s~SecretPassword~${BCRYPT_HASH}~g" ./filebeat_etc/filebeat.yml
 docker-compose down;
 docker-compose up -d;
 
-sleep 60s;
+sleep 120s;
