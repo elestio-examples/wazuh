@@ -36,3 +36,8 @@ bcrypt_hash=$(htpasswd -bnBC 10 "" "$ADMIN_PASSWORD" | tr -d ':\n')
 
 sed -i "s~ADMIN_PASSWORD~${bcrypt_hash}~g" ./config/wazuh_indexer/internal_users.yml
 sed -i "s~ADMIN_PASSWORD~${ADMIN_PASSWORD}~g" ./config/wazuh_dashboard/wazuh.yml
+
+cat << EOT >> ./.env
+
+BCRYPT_HASH=${bcrypt_hash}
+EOT
