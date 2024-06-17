@@ -31,3 +31,8 @@ chmod o+r ./wazuh-dashboard-custom
 
 sysctl -w vm.max_map_count=262144
 docker-compose -f generate-indexer-certs.yml run --rm generator
+
+bcrypt_hash=$(htpasswd -bnBC 10 "" "$ADMIN_PASSWORD" | tr -d ':\n')
+
+sed -i "s~ADMIN_PASSWORD~${bcrypt_hash}~g" ./config/wazuh_indexer/internal_users.yml
+sed -i "s~ADMIN_PASSWORD~${ADMIN_PASSWORD}~g" ./config/wazuh_dashboard/wazuh.yml
