@@ -4,4 +4,4 @@ hosts:
       port: 55000
       username: admin
       password: "ADMIN_PASSWORD"
-      run_as: false
+      run_as: true
