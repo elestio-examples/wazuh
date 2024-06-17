@@ -10,6 +10,10 @@ chown -R 777 ./wazuh-indexer-data
 chown -R 777 ./wazuh-dashboard-config
 chown -R 777 ./wazuh-dashboard-custom
 
+chmod -R 777 ./wazuh-indexer-data
+chmod -R 777 ./wazuh-dashboard-config
+chmod -R 777 ./wazuh-dashboard-custom
+
 chmod o+r ./wazuh-indexer-data
 chmod o+r ./wazuh-dashboard-config
 chmod o+r ./wazuh-dashboard-custom
