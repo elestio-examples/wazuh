@@ -18,4 +18,6 @@ You can open Wazuh here:
 
 # Create new users
 
+To create a new user, you can follow this documentation:
+
 https://documentation.wazuh.com/current/user-manual/user-administration/rbac.html
