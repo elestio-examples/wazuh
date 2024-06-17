@@ -31,5 +31,5 @@ sed -i "s~IP~${IP}~g" ./config/wazuh_dashboard/wazuh.yml
 
 cat << EOT >> ./.env
 
-BCRYPT_HASH=${bcrypt_hash}
+BCRYPT_HASH="${bcrypt_hash}"
 EOT
