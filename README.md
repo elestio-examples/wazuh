@@ -10,8 +10,12 @@ Deploy Wazuh server with CI/CD on Elestio
 
 # Once deployed ...
 
-You have to register with this email address: [EMAIL] to create an admin access in this URL:
+You can open Wazuh here:
 
     URL: https://[CI_CD_DOMAIN]
+    login: admin
+    password: [ADMIN_PASSWORD]
 
-You will then receive an email confirmation along with your password.
+# Create new users
+
+https://documentation.wazuh.com/current/user-manual/user-administration/rbac.html
